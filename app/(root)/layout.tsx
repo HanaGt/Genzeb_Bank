@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar";
-import Image from 'next/image'; // Assuming you are using next/image
+import Image from 'next/image'; 
 import MobileNav from "../../components/MobileNav";
 // import MobileNav from "../../components/mobileNav"; // Assuming you have this component
 
