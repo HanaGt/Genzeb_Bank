@@ -22,12 +22,12 @@ const Home = () => {
         totalCurrentBalance = {1250.30}
         />
         </header>
-        Recent Transations
+        RECENT TRANSACTIONS
       </div>
       <RightSidebar 
       user={loggedIn}
       transactions={[]}
-      banks={[]}
+      banks={[{ currentBalance: 123.50} , { currentBalance : 500.00}]}
       />
     </section>
   )
