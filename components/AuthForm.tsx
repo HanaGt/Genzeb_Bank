@@ -14,8 +14,8 @@ import { authFormSchema } from '../lib/utils';
 import { Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Button } from './ui/button';
+import { signUp, signIn } from '../lib/actions/user.action';
 
-// import PlaidLink from './PlaidLink';
 
 const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter();
@@ -46,26 +46,26 @@ const AuthForm = ({ type }: { type: string }) => {
             lastName: data.lastName!,
             address1: data.address1!,
             city: data.city!,
-            state: data.state!,
-            postalCode: data.postalCode!,
+            // state: data.state!,
+            // postalCode: data.postalCode!,
             dateOfBirth: data.dateOfBirth!,
             ssn: data.ssn!,
             email: data.email,
             password: data.password
           }
 
-          // const newUser = await signUp(userData);
+          const newUser = await signUp(userData);
 
-          // setUser(newUser);
+          setUser(newUser);
         }
 
         if(type === 'sign-in') {
-          // const response = await signIn({
-          //   email: data.email,
-          //   password: data.password,
-          // })
+          const response = await signIn({
+            email: data.email,
+            password: data.password,
+          })
 
-          // if(response) router.push('/')
+          if(response) router.push('/')
         }
       } catch (error) {
         console.log(error);
@@ -82,9 +82,9 @@ const AuthForm = ({ type }: { type: string }) => {
               src="/icons/logo.svg"
               width={34}
               height={34}
-              alt="Genzeb logo"
+              alt="Horizon logo"
             />
-            <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Genzeb</h1>
+            <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Horizon</h1>
           </Link>
 
           <div className="flex flex-col gap-1 md:gap-3">
@@ -120,10 +120,10 @@ const AuthForm = ({ type }: { type: string }) => {
                   </div>
                   <CustomInput control={form.control} name='address1' label="Address" placeholder='Enter your specific address' />
                   <CustomInput control={form.control} name='city' label="City" placeholder='Enter your city' />
-                  <div className="flex gap-4">
+                  {/* <div className="flex gap-4">
                     <CustomInput control={form.control} name='state' label="State" placeholder='Example: NY' />
                     <CustomInput control={form.control} name='postalCode' label="Postal Code" placeholder='Example: 11101' />
-                  </div>
+                  </div> */}
                   <div className="flex gap-4">
                     <CustomInput control={form.control} name='dateOfBirth' label="Date of Birth" placeholder='YYYY-MM-DD' />
                     <CustomInput control={form.control} name='ssn' label="SSN" placeholder='Example: 1234' />
