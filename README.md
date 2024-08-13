@@ -37,7 +37,8 @@ and many more, including code architecture and reusability.
 ![image](https://github.com/user-attachments/assets/f4f0ec27-a684-48e0-9909-5a25e385bf19)
 
 #  My Banks 
-![image](https://github.com/user-attachments/assets/09727567-fcef-4680-a032-30f07311d82d)
+![image](https://github.com/user-attachments/assets/3cf1b8e5-7aa1-4e97-860b-33ef4dfd89c0)
+
 # Transaction History 
 ![image](https://github.com/user-attachments/assets/d1c2452f-acb2-4b83-b086-47417f6127f8)
 # Payment Transfer
